@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secrode</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="https://kit.fontawesome.com/17544686b3.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="container">
+        <div class="logo">
+          <img src="./images/logo.png" alt="Secrode logo">
+        </div>
+        <div class ="title-div">
+          <h3>Welcome to SECRODE</h3> 
+          <p>SECRODE is a fun way to encode and decode secret messages. </p>
+        </div>
+        <div id = 'enclose'>
+          
+          <div class ="encoder encodeco">
+            <label for="secret-message">Create your encoded secret message</label>
+            <textarea id='secret-message' type="text" placeholder="Type your message here"></textarea>
+            <input id="create-btn" type="button" value="ENCRYPT/DECRYPT">
+          </div>
+          
+          <div class="preview">
+            <p id='output' >
+            </p>
+          </div>
+          <div class="share-div">
+            <Span>Share on:</Span>
+            <a class="whatsapp"  target="_blank" rel="noopener noreferrer"><i title="WhatsApp" class="fab fa-whatsapp"></i></a>
+            <a class="sms" target="_blank" rel="noopener noreferrer"><i title="Text Message" class="fas fa-sms"></i></a>
+            <a class="mail" target="_blank" rel="noopener noreferrer"><i title="Mail" class="far fa-envelope"></i></a>
+            <i title="copy" class="far fa-copy"></i>
+          </div>
+        </div>
+        <footer>
+          <p>by St. Pardon &copy; 2021</p>
+          <div class="contact-icons">
+            <a href="https://web.facebook.com/St_Pardon-Inc-1609476265978914" target="_blank" class="contact-btn"> 
+                <i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/st_Pardon" target="_blank" class="contact-btn"> 
+                <i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/St-Pardon" target="_blank" class="contact-btn"> 
+                <i class="fab fa-github"></i></a>
+            <a href="mailto:d_pardon@live.com"  class="contact-btn"> 
+                <i class="fas fa-envelope "></i></a>
+            <a href="https://codepen.io/st_pardon" target="_blank" class="contact-btn"> 
+                <i class="fab fa-codepen"></i></a>
+        </div>
+        </footer>
+      </div>
+      <script src="./script/main.js"></script>
+    </body>
+</html>

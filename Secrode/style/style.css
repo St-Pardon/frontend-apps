@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=DM+Sans&family=Merienda:wght@700&display=swap');
+:root{
+  --background: #272838;
+  --container: #A24936;
+  --text: #BEBBBB;
+  --button: #087CA7;
+  --border: #87F5FB;
+  --welcome: 'Merienda', cursive;
+  --para: 'Abel', sans-serif;
+  --textarea: 'DM Sans', sans-serif;
+}
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body{
+  background-color: var(--text);
+  width: 99vw;
+  font-size: 18px;
+}
+#container{
+  width: 700px;
+  height: 100vh;
+  margin: 0 auto;
+  color: white;
+}
+
+@media screen and (max-width: 650px) {
+  #container{
+    width: 100%;
+    height: 100vh;
+  }
+  
+}
+.logo{
+  width: 150px;
+  /* border: 1px solid red; */
+  height: 100px;
+  margin: 0 auto;
+}
+.logo img{
+  width: 100%;
+}
+.title-div{
+  margin: 0 auto 20px auto;
+  width: 100%;
+  text-align: center;
+}
+.title-div h3{
+  font-family: var(--welcome);
+  font-size: 1.6rem;
+}
+p{
+  font-family: var(--para);
+}
+.encodeco{
+  padding: 0 10px 10px 10px;
+  width: 100%;
+  
+}
+.encodeco label{
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+#enclose{
+  background-color: var(--background);
+  box-shadow: 2px 7px 10px 5px rgba(36,39,56,0.36);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 90%;
+  min-width: 320px;
+}
+.encodeco textarea{
+  display: block;
+  width: 100%;
+  padding: 10px;
+  min-height: 150px;
+  resize: none;
+  border-radius: 5px;
+  font-family: var(--textarea);
+}
+#create-btn{
+  border-radius: 10px;
+  background-color: var(--button);
+  color: var(--text);
+  padding: 10px;
+  font-family: var(--textarea);
+  width: 150px;
+  margin: 10px 0;
+  font-weight: 700;
+  font-size: 0.8rem;
+  border: none;
+  cursor: pointer;
+}
+#create-btn:hover{
+  border-radius: 10px;
+  background-color: #3224ad;
+  color: white;
+}
+.output-style{
+  width: 95%;
+  color: var(--background);
+  text-align: justify;
+  padding: 10px;
+  margin: 20px auto;
+  border: 1px solid var(--button);
+  background-color: var(--border);
+}
+.hide{
+  display: none;
+}
+
+.share-div i{
+  font-size: 1.5rem;
+  margin: 10px 5px;
+  cursor: pointer;
+}
+.share-div .fa-whatsapp{
+  color: green;
+}
+.share-div .fa-sms{
+  color: rgb(64, 64, 248);
+}
+.share-div .fa-envelope{
+  color: red;
+}
+.share-div .fa-copy{
+  color: rgb(155, 154, 154);
+}
+.share-div a{
+  color: unset;
+  text-decoration: none;
+}
+
+/* -------footer----- */
+footer{
+  text-align: center;
+  margin-top: 10px;
+}
+
+footer p, .contact-icons{
+  display: block;
+  margin: 0 10px;
+  text-align: center;
+}
+.contact-btn {
+  color: floralwhite;
+  display: inline-block;
+  border-radius: 2px;
+  transition: transform 0.3s ease-out;
+  margin-bottom: 15px;
+}
+.contact-btn i{
+  font-size: 1.2rem;  
+}
+.contact-btn:hover {
+  transform: translateY(5px);
+}
+
+@media screen and (max-width: 650px) {
+  #enclose{
+    width: 95%;
+  }
+  #create-btn{
+    width: 100%;
+    background: blue;
+    color: cornsilk;
+  }
+  
+}
