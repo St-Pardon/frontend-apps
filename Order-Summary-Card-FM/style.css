@@ -1,0 +1,108 @@
+@import url('https://fonts.google.com/specimen/Red+Hat+Display');
+:root{
+    --paleBlue: hsl(225, 100%, 94%);
+    --brightBlue: hsl(245, 75%, 52%);
+    --veryPaleBlue: hsl(225, 100%, 98%);
+    --desaturatedBlue: hsl(224, 23%, 55%);
+    --darkblue: hsl(223, 47%, 23%);
+}
+*{
+    font-family: 'Red Hat Display', sans-serif
+}
+html{
+    font-size: 16px;
+}
+.attribution { 
+    margin-top: 10px;
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+body{
+    width: 100%;
+    background-color: var(--paleBlue);
+    background-image: url('./images/pattern-background-desktop.svg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+main{
+    width: 450px;
+    margin: 20px auto 0 auto;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 20px;
+    text-align: center;
+}
+h3{
+    font-weight: 900;
+}
+.summary, .price{
+    color: var(--desaturatedBlue);
+}
+.summary{
+    width: 70%;
+    margin: 0 auto;
+    line-height: 1.7rem;
+}
+.price-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+    background-color: var(--veryPaleBlue);
+    border-radius: 15px;
+}
+.price-div p:nth-child(1), .change, button{
+    font-weight: 700;
+}
+.change:hover{
+    color: var(--desaturatedBlue);
+    text-decoration: none;
+}
+.btn-div{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    row-gap: 12px;
+}
+button{
+    padding: 16px 0;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+button:nth-child(2){
+    color: var(--darkblue);
+}
+button:nth-child(1){
+    background-color: var(--brightBlue);
+    border-radius: 7px;
+    color: #fff;
+    box-shadow: 0px 15px 24px -11px var(--darkblue);
+}
+button:nth-child(1):hover{
+    background-color: var(--desaturatedBlue);
+}
+.img-div, h3, .summary, .price-container, .btn-div{
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 357px){
+    body{
+        background-image: url('./images/pattern-background-mobile.svg');
+    }
+    main{
+        width: 90%;
+    }
+    .summary{
+        width: 85%;
+    }
+    .price-container{
+        width: 90%;
+    }
+}

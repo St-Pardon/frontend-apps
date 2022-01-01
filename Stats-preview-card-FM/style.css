@@ -1,0 +1,123 @@
+@import url('https://fonts.google.com/specimen/Inter');
+@import url('https://fonts.google.com/specimen/Lexend+Deca');
+:root{
+    --main-background: hsl(233, 
+    47%, 7%);
+    --card-background: hsl(244, 38%, 16%);
+    --accent: hsl(277, 64%, 61%);
+    --main-heading-stats: hsl(0, 0%, 100%);
+    --main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 15px;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    color: #fff;
+    margin-top: 10px;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+body{
+    width: 100%;
+    background-color: var(--main-background);
+}
+.card{
+    width: 85%;
+    max-width: 1100px;
+    background-color: var(--card-background);
+    display: flex;
+    margin: 10% auto 0 auto;
+    border-radius: 5px;
+}
+.right {
+    width: 50%;
+    background-image: url(./images/image-header-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.right::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    position: absolute;
+    background-color: var(--accent);
+}
+.left {
+    width: 50%;
+    padding: 40px;
+}
+
+h3{
+    color: var(--main-heading-stats);
+    font-size: 1.8rem;
+    font-family: 'inter', sans-serif;
+    font-weight:  700;
+}
+h3 span{
+    color: var(--accent);
+}
+.paragraph{
+    color: var(--main-paragraph);
+    line-height: 1.5;
+    margin: 15px 0 35px 0;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+
+}
+.stats-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 350px;
+}
+.stats-container div h4{
+    color: var(--main-heading-stats);
+    font-size: 1.2rem;
+}
+.stats-container div p{
+    color: var(--stat-headings);
+}
+@media screen and (max-width: 357px) {
+    .card{
+        flex-direction: column-reverse;
+        width: 90%;
+        height: 100vh;
+        text-align: center;
+        margin: 0 auto;
+        transform: translateY(10px);
+    }
+    .left{
+        width: 100%;
+    }
+    .right{
+        border-radius: 5px 5px 0 0;
+        width: 100%;
+        background-image: url(./images/image-header-mobile.jpg);
+        height: 50%;
+        position: relative;
+    }
+    .right::after{
+        left: 0;
+    }
+    h3{
+        font-size: 1.6rem;
+    }
+    .stats-container{
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .stats-container div h4{
+        font-size: 1.5rem;
+    }
+}
