@@ -22,10 +22,15 @@
         <p>Hello fellow shoppers! We're currently building our new fashion store. 
         Add your email below to stay up-to-date with announcements and our launch deals.</p>
         
-        <fieldset>
-          <input type="email" placeholder="Email Address">
-          <button><img src="./images/icon-arrow.svg" alt="arrow-right"></button>
-        </fieldset>  
+        <form id="form" action="">
+          <fieldset>
+            <input type="email" name="email"  placeholder="Email Address" required>
+            <img src="./images/icon-error.svg" id="err" alt="error">
+            <button id="btn" type="submit"><img src="./images/icon-arrow.svg" alt="arrow-right"></button>
+          </fieldset>
+          <span id="errmsg">Please provide a valid email</span>  
+
+        </form>
       </div>
     </section>
     <section class="section2">
@@ -38,5 +43,26 @@
       Coded by <a href="http://wwww.st-pardon.netlify.app">St. Pardon</a>.
     </p>
   </footer>
+  <script>
+    const mail = document.getElementsByName('email')[0];
+    const errmsg = document.getElementById('errmsg');
+    const form = document.getElementById('form');
+    const err = document.getElementById('err');
+    const fieldset = document.querySelector('fieldset');
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+    })
+    mail.oninput=()=>{
+      errmsg.style.display = 'none';
+      err.style.display = 'none';
+      fieldset.style.borderColor = 'hsl(0, 36%, 70%)';
+
+    }
+    mail.oninvalid = () =>{
+      errmsg.style.display = 'block';
+      err.style.display = 'block';
+      fieldset.style.borderColor = 'hsl(0, 93%, 68%)';
+    }
+  </script>
 </body>
 </html>

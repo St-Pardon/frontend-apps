@@ -4,7 +4,7 @@
     --desaturatedRed: hsl(0, 36%, 70%);
     --softRed: hsl(0, 93%, 68%);
     --darkGrayishRed: hsl(0, 6%, 24%);
-    --background1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    --background1: linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 36%, 60%) 100%);
     --background2: linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 100%);
     --title-weight: 600;
     --para: 500;
@@ -73,6 +73,7 @@ fieldset{
     border-radius: 22px;
     border: 1px solid var(--desaturatedRed);
     padding-left: 22px;
+    align-items: center;
     display: flex;
     width: -webkit-fill-available;
 }
@@ -97,8 +98,22 @@ fieldset button{
     border-radius: 22px;
     box-shadow: 0px 10px 20px -6px var(--softRed);
 }
+fieldset button:hover{
+    background: var(--background1);
+}
 h2, p{
     padding-bottom: 8%;
+}
+/* error stylying ------ */
+#err{
+    padding-right: 5px;
+    display: none;
+}
+#errmsg{
+    display: none;
+    color: var(--softRed);
+    font-size: 12px;
+    padding: 10px 0 0 20px;
 }
 @media screen and (max-width: 900px) {
     h2{
