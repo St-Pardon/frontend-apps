@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+:root{
+  --Orange: hsl(26, 100%, 55%);
+  --Pale-orange: hsl(25, 100%, 94%);
+  --Very-vark-blue: hsl(220, 13%, 13%);
+  --Dark-grayish-blue: hsl(219, 9%, 45%);
+  --Grayish-blue: hsl(220, 14%, 75%);
+  --Light-grayish-blue: hsl(223, 64%, 98%);
+  --White: hsl(0, 0%, 100%);
+  --Black-lightbox: hsla(0, 0%, 0%, 65%);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+.container{
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 100vh;
+}
+/* stylings for the header ----- */
+.header, .header .left-half, .header .left-half .nav, .header .checkout{
+  display: flex;
+  align-items: center;
+}
+.header .left-half .nav, .header .checkout, 
+.main .btn-container button, .main .add-to-cart-container, 
+.main .thumbnail-container{
+  cursor: pointer;
+}
+.header{
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  margin: 0 auto;
+  width: 90%;
+  padding: 0 15px;
+}
+.header .left-half{
+  justify-content: space-between;
+  width: 65%;
+}
+.header .left-half .nav{
+  justify-content: space-evenly;
+  width: 70%;
+  max-width: 600px;
+}
+.header .left-half .nav p{
+  padding: 25px 0;
+  color: var(--Dark-grayish-blue);
+  font-weight: 400;
+}
+.header .left-half .nav p:hover{
+  border-bottom: 2px solid var(--Orange);
+  color: var(--Very-vark-blue);
+  padding: 25px 0 23px 0;
+}
+.header .checkout{
+  justify-content: space-evenly;
+}
+.header .checkout .avatar-container, .header .checkout .cart-container{
+  width: 70px;
+}
+.header .checkout .avatar-container .avatar, .header .checkout .cart-container{
+  width: 100%;
+}
+.header .checkout .cart-container .cart{
+  margin: 0 10px 
+}
+.header .checkout .cart-container .cart-details-container{
+  display: none;
+  position: absolute;
+  padding-bottom: 20px;
+  transform: translate(-145px, 10px);
+  width: 320px;
+  background-color: var(--White);
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px 8px var(--Light-grayish-blue),
+  -1px 1px 20px 2px var(--Light-grayish-blue);
+}
+.header .checkout .cart-container .cart-details-container h3{
+  font-size: 0.9rem;
+  padding: 20px 0 20px 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+.header .checkout .cart-container .cart-details-container .cart-details{
+  padding: 20px 0 20px 15px;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  column-gap: 10px;
+  color: var(--Grayish-blue);
+}
+.header .checkout .cart-container .cart-details-container .cart-details .cart-total{
+  color: var(--Very-vark-blue);
+  font-weight: 700;
+}
+.header .checkout .cart-container .cart-details-container .cart-details .cart-product{
+  border-radius: 10px;
+}
+.header .checkout .cart-container .cart-details-container button{
+  background-color: var(--Orange);
+  padding: 10px 35%;
+  border: none;
+  display: block;
+  font-weight: 700;
+  margin: 0 auto;
+  border-radius: 10px;
+  color: var(--White);
+}
+.header .checkout .cart-container .cart-details-container .empty-cart{
+  text-align: center;
+  padding: 20px 0;
+  color: var(--Grayish-blue);
+}
+
+.header .checkout .cart-container{
+  position: relative;
+}
+.header .checkout .cart-container .cart-count{
+  position: absolute;
+  background-color: var(--Orange);
+  top: -11px;
+  right: 25px;
+  padding: 0px 9px;
+  border-radius: 29px;
+  font-size: 12px;
+  color: var(--Pale-orange);
+}
+.header .checkout .cart-container:hover > .cart-details-container{
+  display: block;
+}
+.header .checkout .avatar-container .avatar:hover{
+  border: 2px solid var(--Orange);
+  border-radius: 100%;
+}
+
+
+/* styling for the main -----  */
+.main .image-div{
+  row-gap: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.main, .main .image-div div,
+.modal .image-div div{
+  display: flex;
+}
+.main{
+  margin: 30px auto;
+  width: 80%;
+  justify-content: space-evenly;
+}
+.main .image-div, .main .product-details{
+  width: 40%;
+}
+.main .image-div .hero-container .hero-img, 
+.modal .image-div .hero-container .hero-img{
+  border-radius: 10px;
+  width: 100%;
+}
+.main .image-div div .thumbnail-container, 
+.modal .image-div div .thumbnail-container{
+  width: 20%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.main .image-div div,
+.modal .image-div div{
+  justify-content: space-between;
+}
+
+.main .image-div div .thumbnail-container .thumbnail,
+.modal .image-div div .thumbnail-container .thumbnail{
+  width: 100%;
+  height: 100%;
+}
+.main .image-div div .thumbnail-container .thumbnail:hover,
+.modal .image-div div .thumbnail-container .thumbnail:hover {
+  opacity: 0.5;
+}
+.main .image-div div .thumbnail-container.active,
+.modal .image-div div .thumbnail-container.active{
+  border-radius: 10px;
+  border: 2px solid var(--Orange);
+}
+.main .image-div div .thumbnail-container.active > .thumbnail,
+.modal .image-div div .thumbnail-container.active > .thumbnail{
+  opacity: 0.5;
+}
+.main .close, .main .next, .main .previous{
+  display: none;
+}
+.main .product-details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main .product-details .product-coy{
+  color: var(--Orange);
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+.main .product-details .product-name{
+  margin-bottom: 30px;
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+.main .product-details .product-description{
+  margin-bottom: 30px;
+  color: var(--Dark-grayish-blue);
+  font-size: 16px;
+  line-height: 1.5rem;
+}
+.main .product-details .product-price{
+  font-size: 1.5rem;
+  display: inline-block;
+  position: relative;
+  width: fit-content;
+}
+.main .product-details .product-price::after{
+  content: '50%';
+  font-size: 1rem;
+  position: absolute;
+  right: -60px;
+  top: 3px;
+  padding: 2px 10px;
+  background-color: var(--Pale-orange);
+  color: var(--Orange);
+  border-radius: 10px;
+  font-weight: 700;
+}
+.main .product-details .product-price::before{
+  content: '$250.00';
+  font-size: 1rem;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  color: var(--Grayish-blue);
+  font-weight: 400;
+  text-decoration: line-through;
+}
+.main .product-details .btn-container{
+  display: flex;
+  margin-top: 40px;
+  column-gap: 10px;
+}
+.main .product-details .btn-container .item-btns{
+  background-color: var(--Light-grayish-blue);
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+.main .product-details .btn-container span{
+  min-width: 10px;
+}
+.main .product-details .btn-container button{
+  background-color: unset;
+  border: none;
+  padding: 0 20px;
+}
+.main .product-details .add-to-cart-container{
+  display: flex;
+  align-items: center;
+  background-color: var(--Orange);
+  padding: 10px 25px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 8px 5px hsl(26, 100%, 80%);
+}
+.main .product-details .add-to-cart-container button{
+  font-weight: 700;
+  color: var(--Pale-orange);
+  background-color: unset;
+  border: none;
+  padding: 0 10px;
+}
+.main .product-details .add-to-cart-container:hover, .main .product-details .btn-container button:hover{
+  opacity: 0.6;
+}
+footer{
+  text-align: center;
+}
+
+
+/* Styling the modal box -----  */
+
+.overlay{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--Black-lightbox);
+}
+.modal{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+.modal .image-div{
+  z-index: 10;
+  display: flex;
+  margin: 100px auto;
+  flex-direction: column;
+  row-gap: 20px;
+  position: relative;
+  max-width: 450px;
+  width: 50%;
+}
+.modal .thumbnail-container{
+  background-color: var(--White);
+}
+.modal .close, .modal .previous, .modal .next{
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal .close{
+  position: absolute;
+  right: 0;
+  top: -60px;
+}
+.modal .close svg path{
+  fill: var(--White);
+}
+
+.modal .next, .modal .previous{
+  position: absolute;
+  top: 200px;
+  background-color: var(--White);
+}
+.modal .next{
+  right: -25px;
+}
+.modal .previous{
+  left: -25px;
+}
+.modal .close:hover >  svg > path{
+  fill: var(--Orange);
+}
+.modal .next:hover >  svg > path, 
+.modal .previous:hover >  svg > path
+{
+  stroke: var(--Orange);
+}
