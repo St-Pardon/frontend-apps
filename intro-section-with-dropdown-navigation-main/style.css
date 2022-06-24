@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Epilogue', sans-serif;
+}
+
+:root {
+    --Almost-White: hsl(0, 0%, 98%);
+    --Medium-Gray: hsl(0, 0%, 41%);
+    --Almost-Black: hsl(0, 0%, 8%);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.header,
+.nav,
+figure,
+.left-half,
+.right-half {
+    display: flex;
+    align-items: center;
+    color: var(--Medium-Gray);
+}
+
+.header {
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.header,
+.left-half,
+.right-half,
+.section1,
+.section2 {
+    width: 100%;
+}
+
+.left-half {
+    justify-content: space-evenly;
+}
+
+.nav {
+    width: 70%;
+    position: relative;
+    justify-content: space-around;
+}
+
+.nav P {
+    cursor: pointer;
+}
+
+.nav p:hover {
+    color: var(--Almost-Black);
+}
+
+.right-half {
+    justify-content: flex-end;
+    gap: 10px
+}
+
+.right-half button {
+    padding: 5px 12px;
+    border: none;
+    background-color: inherit;
+}
+
+.right-half button:nth-child(2) {
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.main {
+    max-width: 1000px;
+    margin: 20px auto 0 auto;
+    display: flex;
+    column-gap: 50px;
+}
+
+.section2 img {
+    width: 100%;
+}
+
+.features-dropdown div {
+    display: flex;
+    column-gap: 10px;
+
+}
+
+.features-dropdown,
+.company-dropdown {
+    row-gap: 7px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    cursor: pointer;
+    display: none;
+}
+
+.features-dropdown {
+    left: 30px;
+    top: 28px;
+}
+
+.company-dropdown {
+    left: 185px;
+    top: 28px;
+}
+
+.section1 h1 {
+    font-size: 3.5em;
+    margin-bottom: 30px;
+}
+
+.section1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.section1 p {
+    color: var(--Medium-Gray);
+    line-height: 1.3rem;
+}
+
+.section1 h1,
+.section1 button,
+.section1 p {
+    margin-bottom: 30px;
+}
+
+.section1 button {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    color: var(--Almost-White);
+    background-color: var(--Almost-Black);
+    font-weight: 700;
+}
+
+.section1 button:hover {
+    border: 1px solid black;
+    background-color: var(--Almost-White);
+    color: var(--Almost-Black);
+}

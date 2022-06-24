@@ -11,7 +11,7 @@ import previous from "../images/icon-previous.svg";
 import close from "../images/icon-close.svg";
 import { useState } from "react";
 
-export const ProductDisplay = ({changeOpen}) => {
+export const ProductDisplay = ({changeOpen, close}) => {
     const [img, setImg] = useState(product1);
     const [active, setActive] = useState({
       first: true,
@@ -43,7 +43,7 @@ export const ProductDisplay = ({changeOpen}) => {
           />
         </svg>
       </figure>
-      <figure className="close">
+      <figure className="close" onClick={() => close(false)}>
         <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
           <path
             d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"

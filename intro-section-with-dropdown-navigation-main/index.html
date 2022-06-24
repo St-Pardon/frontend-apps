@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css">
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="left-half">
+        <figure>
+          <img src="./images/logo.svg" alt="logo" />
+        </figure>
+        <nav class="nav">
+          <p id="features">Features <img src="./images/icon-arrow-down.svg" alt=""></p>
+          <p id="company">Company <img src="./images/icon-arrow-down.svg" alt=""></p>
+          <p>Careers</p>
+          <p>About</p>
+
+          <div id="features-dropdown" class="features-dropdown">
+            <div>
+              <img src="./images/icon-todo.svg" alt="">
+              <p>Todo list</p>
+            </div>
+            <div>
+              <img src="./images/icon-calendar.svg" alt="">
+              <p>Calendar</p>
+            </div>
+            <div>
+              <img src="./images/icon-reminders.svg" alt="">
+              <p>Reminders</p>
+            </div>
+            <div>
+              <img src="./images/icon-planning.svg" alt="">
+              <p>Planning</p>
+            </div>
+          </div>
+          <div id="company-dropdown" class="company-dropdown">
+              <p>History</p>
+              <p>Our Team</p>
+              <p>Blog</p>
+          </div>
+        </nav>
+      </div>
+      <div class="right-half">
+        <button>Login</button>
+        <button>Register</button>
+      </div>
+    </header>
+    <main class="main">
+      <section class="section1">
+        <h1>Make <br>remote work</h1>
+        <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+        <button>Learn more</button>
+        <div class="partners">
+          <img src="./images/client-databiz.svg" alt="databiz">
+          <img src="./images/client-audiophile.svg" alt="audiophile">
+          <img src="./images/client-meet.svg" alt="meet">
+          <img src="./images/client-maker.svg" alt="maker">
+        </div>
+      </section>
+      <section class="section2">
+        <img src="./images/image-hero-desktop.png" alt="hero image">
+      </section>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://st-pardon.netlify.app">St. Pardon</a>.
+    </div>
+    <script>
+      const featuresDropdown = document.getElementById("features-dropdown");
+      const companyDropdown = document.getElementById("company-dropdown");
+      const features = document.getElementById("features");
+      const company = document.getElementById('company');
+      
+      featuresDropdown.style.display = "none";
+      companyDropdown.style.display = "none";
+      
+      
+      const openDrop = (drop) => {
+        console.log("clicked");
+        if (drop.style.display == "none"){
+          drop.style.display = "flex"
+        } else {
+          drop.style.display = "none"
+        }
+      }
+      
+      features.onclick = () => openDrop(featuresDropdown);
+      company.onclick = () => openDrop(companyDropdown);
+    </script>
+  </body>
+</html>

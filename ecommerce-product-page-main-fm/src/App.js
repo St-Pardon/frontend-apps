@@ -23,7 +23,7 @@ function App() {
       <Header cartCount={cartCount} product={product} />
       <Main addToCart={addToCart} changeOpen={changeOpen}/>
       <LightBox open={open} onClose={() => setOpen(false)}>
-        <ProductDisplay />
+        <ProductDisplay close={setOpen} />
       </LightBox>
       <Footer />
     </div>
