@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Interactive rating component</title>
+</head>
+
+<body>
+  <main class="main">
+    <form action="" class="form">
+      <figure>
+        <img src="./images/icon-star.svg" alt="">
+      </figure>
+      <h2 class="rating-text">How did we do?</h2>
+      <p class="rating-para">Please let us know how we did with your support request. All feedback is appreciated
+        to help us improve our offering!</p>
+      <div class="input-div">
+        <input class="btn" type="button" value="1">
+        <input class="btn" type="button" value="2">
+        <input class="btn" type="button" value="3">
+        <input class="btn" type="button" value="4">
+        <input class="btn" type="button" value="5">
+      </div>
+      <br>
+      <input class="submit" type="submit" value="Submit">
+    </form>
+
+    <section class="section">
+      <figure>
+        <img src="./images/illustration-thank-you.svg" alt="">
+      </figure>
+      <h5 class="selected">You selected <span class="val"></span> out  of 5</h5>
+      <h2 class="thx">Thank you!</h2>
+      <p class="para">We appreciate you taking the time to give a rating. If you ever need more support,
+        don't hesitate to get in touch!</p>
+    </section>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://st-pardon.netlify.app">St. Pardon</a>.
+  </div>
+  <script>
+    let btns = document.querySelectorAll(".btn");
+    let span = document.querySelector(".val");
+    let form = document.querySelector(".form");
+    let sect = document.querySelector(".section");
+    let val;
+
+    btns.forEach(element => {
+      element.addEventListener("click", (e)=>{
+        btns.forEach(btn => {
+          btn.classList.remove("active")
+        })
+        element.classList.add("active");
+        val = e.target.value
+      })
+    });
+
+      form.addEventListener("submit", e=> {
+        e.preventDefault();
+        span.innerHTML = val;
+        form.style.display = "none";
+        sect.style.display = "block"
+      })
+  </script>
+</body>
+
+</html>
