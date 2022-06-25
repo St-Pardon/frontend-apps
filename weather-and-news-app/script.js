@@ -1,4 +1,5 @@
  import { conditionCode,  svg, weiodData, category } from './data.js';
+ import { EnvToken } from './config.js';
 // import { conditionCode, weatherData, svg, weiodData, category } from './data.js';
 
 var weatherData, newsData;
@@ -10,8 +11,8 @@ let selectCategory = "category=World_Africa"
 // fetch("https://yahoo-weather5.p.rapidapi.com/weather?woeid="+ woeidNum +"&format=json&u=c", {
 // 	"method": "GET",
 // 	"headers": {
-// 		"x-rapidapi-host": "yahoo-weather5.p.rapidapi.com",
-// 		"x-rapidapi-key": "47c3e55b61msh853f2b8deb9964ap17c226jsn189c8c30756b"
+		// "x-rapidapi-host": EnvToken['yahoo-x-rapidapi-host'],
+		// "x-rapidapi-key": EnvToken['yahoo-x-rapidapi-key']
 // 	}
 // })
 // .then(response => {
@@ -30,8 +31,8 @@ const fetchNews = async (cat, loc2) =>{
 		"headers": {
 			"x-bingapis-sdk": "true",
 			"x-search-location": loc2,
-			"x-rapidapi-host": "bing-news-search1.p.rapidapi.com",
-			"x-rapidapi-key": "47c3e55b61msh853f2b8deb9964ap17c226jsn189c8c30756b"
+			"x-rapidapi-host": EnvToken['bing-x-rapidapi-host'],
+			"x-rapidapi-key": EnvToken['bing-x-rapidapi-key']
 		}
 	});
 	const data = await res.json();
@@ -45,8 +46,8 @@ const fetchData = async (loc) => {
 	const res = await fetch("https://yahoo-weather5.p.rapidapi.com/weather?"+loc+"&format=json&u=c", {
 		"method": "GET",
 		"headers": {
-			"x-rapidapi-host": "yahoo-weather5.p.rapidapi.com",
-			"x-rapidapi-key": "47c3e55b61msh853f2b8deb9964ap17c226jsn189c8c30756b"
+			"x-rapidapi-host": EnvToken['yahoo-x-rapidapi-host'],
+			"x-rapidapi-key": EnvToken['yahoo-x-rapidapi-key']
 		}
 	});
 	const data = await res.json()
