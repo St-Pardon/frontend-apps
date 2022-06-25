@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just Weather</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <h3>Just <span>Weather</span></h3>
+    </header>
+    <main class="main">
+        <section class="weather-container">
+            <div class="container">
+                <h1 class="city"></h1>
+                <p class="date"><span></span></p>
+                <div class="weather-div">
+                    <img id="icon" src="" class="icon" alt="">
+                    <p id="weather" class="weather weather-name"></p>
+                </div>
+                <div class="weather-info">
+                    <div class="temp-div">
+                        <img class="icon icon-temp"  src="./svg/1530373_weather_forecast_temperature_thermometer_icon.svg" alt="">
+                        <p id="temp" class="temp"></p>
+                    </div>
+                    <div>
+                        <p class="wind">Wind: 
+                           <span title="Chill">
+                                <img src="./png/chill.png" alt="chill" class="weather-info-icon">
+                                <span id="chill"></span> 
+                           </span>
+                           <span title="Direction">
+                                <img src="./png/direction.png" alt="direction" class="weather-info-icon">
+                                <span id="direction"></span> 
+                           </span>
+                           <span title="Speed">
+                                <img src="./png/speed.png" alt="speed" class="weather-info-icon">
+                                <span id="speed"></span>
+                           </span>
+                        </p>
+                        <p class="atmosphere">Atmosphere: 
+                            <span title="Humidity">
+                                <img src="./png/humidity.png" alt="humidity" class="weather-info-icon">
+                                <span id="humidity"></span> 
+                            </span>
+                            <span title="Visibility">
+                                <img src="./png/visibility.png" alt="visibility" class="weather-info-icon">
+                                <span id="visibility"></span> 
+                            </span>
+                            <span title="Pressure">
+                                <img src="./png/pressure.png" alt="pressure" class="weather-info-icon">
+                                <span id="pressure"></span>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <fieldset>
+                        <legend>Change City</legend>
+                        <select name="" id="city-woied">
+                            <option class="option1" value="- - Select the City - -" selected disabled>- - Select the City - -</option>
+                        </select>
+                    </fieldset>
+                </div>
+            </div>
+            <main id="forcasts">
+                <!-- <div class="forcast-items">
+                    <p class="forcast-day">Wed, <span class="forcast-date">03-12-2021</span></p>
+                    <div class="forcast-info-container">
+                        <img class="forcast-icon icon" src="./svg/1530369_weather_cloud_clouds_cloudy_icon.svg" alt="">
+                        <div class="forcast-info-div">
+                            <p class="forcast-weather">Cloudy</p>
+                            <div class="forcast-info">
+                                <div>
+                                    <p class="forcast-temp">Avg <span>84</span></p>
+                                </div>
+                                <div>
+                                    <p class="high">High <span>80</span></p>
+                                    <p class="low">Low <span>86</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </main>
+        </section>
+        <section  class="news">
+            <h3 class="news-heading">Today's News</h3>
+            <fieldset>
+                    <legend>News Category</legend>
+                    <select name="" id="news-category">
+                        <option class="news-option1" value="- - Select Category - -" selected disabled>- - Select Category - -</option>
+                    </select>
+            </fieldset>
+            <div id="news-heading">
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

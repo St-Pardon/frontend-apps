@@ -5,28 +5,183 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend Projects</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 16px;
+      }
+      .header {
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .header h2 {
+        color: rgb(101, 238, 101);
+      }
+      .header p {
+        padding: 10px 20px;
+        font-size: 1.2rem;
+      }
+      .header a {
+        background-color: rgb(101, 238, 101);
+        color: azure;
+        border-radius: 15px;
+        text-decoration: none;
+      }
+      .main {
+        margin: 0 auto;
+        max-width: 900px;
+        width: 100%;
+        min-height: 80vh;
+      }
+      .main h2,
+      .main p {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 1.2rem;
+      }
+      .main h2 {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+      }
+      .main .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        column-gap: 20px;
+        row-gap: 30px;
+      }
+      .main .grid figure,
+      .main .grid figure img{
+        width: 100%;
+        height: 200px;
+      }
+      .main .grid figcaption{
+        position: absolute;
+        color: #012e43;
+        text-transform: capitalize;
+        font-size: 1.2rem;
+      }
+      .main .grid figure img:hover{
+        transform: scale(1.2, 1.2);
+      }
+      .main .grid figure img:hover ~ figcaption{
+        color: rgb(101, 238, 101);
+      }
+      .main .grid a {
+        text-decoration: none;
+      }
+      .main .grid {
+        list-style: none;
+      }
+      .main .grid li{
+        width: 100%;
+        overflow: hidden;
+      }
+      .footer {
+        text-align: center;
+        padding: 20px 0;
+        background-color: rgb(101, 238, 101);
+      }
+    </style>
   </head>
   <body>
-    <main>
-      <h2>Project Lists</h2>
-      <p>contains mostly project from frontend mentors</p>
-      <ul>
-        <a href="./Coming-Soon-Poster-FM/index.html" target="_blank"
-          ><li>Comming Soon Poster</li></a
-        >
+    <header class="header">
+      <h2 class="" logo>St. Pardon</h2>
+      <a href="https://st-pardon.netlify.app"><p>&leftarrow; Back</p></a>
+    </header>
+    <main class="main">
+      <h2>Projects</h2>
+      <p>Contains some of the frontend works with vanila CSS and JavaScript</p>
+      <hr style="margin: 20px auto; width: 60%">
+      <ul class="grid">
+        <a href="./weather-and-news-app/index.html" target="_blank">
+          <li>
+            <figure>
+              <img
+                src="https://img.freepik.com/free-vector/hand-holding-mobile-phone-with-weather-app-vector-illustration_74855-18354.jpg?t=st=1656155990~exp=1656156590~hmac=2ffa7960afaf0ed5cba4fb212b8164c40748dd875e85f03fe51d752779f6e411&w=826"
+                alt="weather ui"
+              />
+              <figcaption>Just weather</figcaption>
+            </figure>
+          </li>
+        </a>
+        <a href="./Coming-Soon-Poster-FM/index.html" target="_blank">
+          <li>
+            <figure>
+              <img
+                src="./Coming-Soon-Poster-FM/images/hero-mobile.jpg"
+                alt=""
+              />
+              <figcaption>Comming Soon Poster</figcaption>
+            </figure>
+          </li>
+        </a>
         <a href="./Order-Summary-Card-FM/index.html" target="_blank">
-          <li>Order Summary Card</li>
+          <li>
+            <figure>
+              <img
+                src="./Order-Summary-Card-FM/images/illustration-hero.svg"
+                alt=""
+              />
+              <figcaption>Order Summary Card</figcaption> 
+            </figure>
+          </li>
         </a>
         <a href="./Stats-preview-card-FM/index.html" target="_blank">
-          <li>Stats preview card</li>
+          <li>
+            <figure>
+              <img
+                src="./Stats-preview-card-FM/images/image-header-mobile.jpg"
+                alt=""
+              />
+              <figcaption>Stats preview card</figcaption>
+            </figure>
+          </li>
         </a>
         <a href="https://codepen.io/st_pardon/full/dyWgQzw" target="_blank">
-                <li>Random Quote Generator</li>
-            </a>
+          <li>
+            <figure>
+              <img src="./img/quote generator.jpg" alt="" />
+              <figcaption>Random Quote Generator</figcaption>
+            </figure>
+          </li>
+        </a>
         <a href="./Secrode/index.html" target="_blank">
-          <li>Secrode</li>
+          <li>
+            <figure>
+              <img src="./img/secrode.jpg" alt="" />
+              <figcaption>Secrode</figcaption>
+            </figure>
+          </li>
+        </a>
+        <a
+          href="./intro-section-with-dropdown-navigation-main/index.html"
+          target="_blank"
+        >
+          <li>
+            <figure>
+              <img
+                src="./intro-section-with-dropdown-navigation-main/design/desktop-preview.jpg"
+                alt=""
+              />
+              <figcaption>Intro Section Navigation</figcaption>
+            </figure>
+          </li>
         </a>
       </ul>
     </main>
+    <footer class="footer">
+      <p>
+        <a href="https://st-pardon.netlify.app">St. Pardon</a> &copy; 2021. All
+        Right Reserved.
+      </p>
+    </footer>
   </body>
 </html>
